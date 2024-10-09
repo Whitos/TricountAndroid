@@ -19,7 +19,7 @@
             android:name=".NewTricountActivity"
             android:exported="false" />
         <activity
-            android:name=".AfficheRecyclerViewActivity"
+            android:name=".PageAccueilActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

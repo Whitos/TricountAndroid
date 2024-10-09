@@ -1,24 +1,44 @@
 package com.example.tricount;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.example.tricount.databinding.ActivityDepensesTricountBinding;
 
 public class DepensesTricountActivity extends AppCompatActivity {
+
+    private ActivityDepensesTricountBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_depenses_tricount);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        binding = ActivityDepensesTricountBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
+        String titre = getIntent().getStringExtra("titre");
+
+        // Afficher le titre dans un TextView ou l'utiliser
+        TextView titreTextView = findViewById(R.id.textViewTitre);
+        titreTextView.setText(titre);
+
+        binding.buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String titre = getIntent().getStringExtra("titre");
+
+                // Afficher le titre dans un TextView ou l'utiliser
+                TextView titreTextView = findViewById(R.id.textViewTitre);
+                titreTextView.setText(titre);
+
+                Intent intent = new Intent(DepensesTricountActivity.this, PageAccueilActivity.class);
+
+                startActivity(intent);
+            }
         });
     }
 }

@@ -99,11 +99,14 @@
         android:layout_marginTop="56dp"
         android:background='@drawable/rounded_button'
         android:backgroundTint="#FFFFFF"
+        android:cursorVisible="false"
         android:text="@string/creer_tricount"
+        app:iconTint="#D80909"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextParticipants" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextParticipants"
+        app:strokeColor="#B8A4A4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2B2424"
-    tools:context=".AfficheRecyclerViewActivity">
+    tools:context=".PageAccueilActivity">
 
     <ImageView
         android:id="@+id/logoImageViewPageAccueil"
