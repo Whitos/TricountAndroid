@@ -20,22 +20,16 @@ public class DepensesTricountActivity extends AppCompatActivity {
         binding = ActivityDepensesTricountBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-        String titre = getIntent().getStringExtra("titre");
 
-        // Afficher le titre dans un TextView ou l'utiliser
-        TextView titreTextView = findViewById(R.id.textViewTitre);
-        titreTextView.setText(titre);
+        String titreRecu = getIntent().getStringExtra("titre");
+        binding.textViewTitre.setText(titreRecu);
 
         binding.buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String titre = getIntent().getStringExtra("titre");
-
-                // Afficher le titre dans un TextView ou l'utiliser
-                TextView titreTextView = findViewById(R.id.textViewTitre);
-                titreTextView.setText(titre);
-
+                String titre = binding.textViewTitre.getText().toString();
                 Intent intent = new Intent(DepensesTricountActivity.this, PageAccueilActivity.class);
+                intent.putExtra("titre", titre);
 
                 startActivity(intent);
             }

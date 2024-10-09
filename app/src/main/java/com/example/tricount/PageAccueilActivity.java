@@ -18,6 +18,9 @@ public class PageAccueilActivity extends AppCompatActivity {
         binding = ActivityAfficheRecyclerViewBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+//        String titreRecu = getIntent().getStringExtra("titre");
+//        binding.textViewTitre.setText(titreRecu);
+        //RECYCLER VIEW POUR CA
 
         binding.buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override

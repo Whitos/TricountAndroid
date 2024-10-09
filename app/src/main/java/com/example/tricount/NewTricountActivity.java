@@ -26,14 +26,15 @@ public class NewTricountActivity extends AppCompatActivity {
         binding = ActivityNewTricountBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-        EditText editText = findViewById(R.id.editTextTitre);
-        String titre = editText.getText().toString();
 
         binding.buttonCreerTricount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String titre = binding.editTextTitre.getText().toString();
                 Intent intent = new Intent(NewTricountActivity.this, DepensesTricountActivity.class);
+                //Intent intent1 = new Intent(NewTricountActivity.this, PageAccueilActivity.class); // RECYCLER VIEW
                 intent.putExtra("titre", titre);
+
                 startActivity(intent);
             }
         });
