@@ -5,6 +5,42 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2B2424"
     tools:context=".AfficheRecyclerViewActivity">
+
+    <ImageView
+        android:id="@+id/logoImageViewPageAccueil"
+        android:layout_width="231dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/logoPageAccueil"
+        android:src="@drawable/petit_tricount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonAdd"
+        android:layout_width="60dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="372dp"
+        android:background="@drawable/rounded_button"
+        android:contentDescription="@string/addButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageViewPageAccueil"
+        app:srcCompat="@drawable/addlogo" />
+
+    <TextView
+        android:id="@+id/textViewNvTricount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/nouveau_tricount"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonAdd" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
