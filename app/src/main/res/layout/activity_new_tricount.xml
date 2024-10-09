@@ -5,6 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2B2424"
     tools:context=".NewTricountActivity">
 
+    <ImageView
+        android:id="@+id/logoImageViewPageAccueil"
+        android:layout_width="231dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/logoPageAccueil"
+        android:src="@drawable/petit_tricount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
