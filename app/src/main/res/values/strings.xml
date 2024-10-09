@@ -3,4 +3,8 @@
     <string name="addButton">addButton</string>
     <string name="logoPageAccueil">logoPageAccueil</string>
     <string name="nouveau_tricount">Nouveau Tricount</string>
+    <string name="titre">Titre</string>
+    <string name="options">Options</string>
+    <string name="participants">Participants</string>
+    <string name="creer_tricount">Créer le tricount</string>
 </resources>

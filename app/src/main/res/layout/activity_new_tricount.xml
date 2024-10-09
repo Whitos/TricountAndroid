@@ -17,4 +17,93 @@
         android:src="@drawable/petit_tricount"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/titre"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageViewPageAccueil" />
+
+    <EditText
+        android:id="@+id/editTextTitre"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:background='@drawable/rounded_button'
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitre" />
+
+    <TextView
+        android:id="@+id/textViewOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/options"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTitre" />
+
+    <EditText
+        android:id="@+id/editTextOptions"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="28dp"
+        android:background='@drawable/rounded_button'
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOptions" />
+
+
+    <TextView
+        android:id="@+id/textViewParticipants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/participants"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextOptions" />
+
+    <EditText
+        android:id="@+id/editTextParticipants"
+        android:layout_width="332dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:background='@drawable/rounded_button'
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewParticipants" />
+
+    <Button
+        android:id="@+id/buttonCreerTricount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:background='@drawable/rounded_button'
+        android:backgroundTint="#FFFFFF"
+        android:text="@string/creer_tricount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextParticipants" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
