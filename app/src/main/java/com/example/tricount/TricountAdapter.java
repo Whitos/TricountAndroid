@@ -18,6 +18,7 @@ public class TricountAdapter extends RecyclerView.Adapter<TricountAdapter.Tricou
     private List<Tricount> tricountList;
     private Context context;
 
+
     public TricountAdapter(Context context, List<Tricount> tricountList) {
         this.context = context;
         this.tricountList = tricountList;

@@ -21,25 +21,28 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewExpenses"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="407dp"
+        android:layout_height="525dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonNouveauDepense"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/buttonNouveauDepense" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
 
     <Button
         android:id="@+id/buttonNouveauDepense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button"
         android:backgroundTint="@color/teal_700"
-        android:text="Nouveau Dépense"
+        android:text="Ajouter une dépense "
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@id/recyclerViewExpenses"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewExpenses" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

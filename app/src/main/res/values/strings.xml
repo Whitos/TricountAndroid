@@ -8,6 +8,7 @@
     <string name="participants">Participants</string>
     <string name="creer_tricount">Créer le tricount</string>
     <string name="add_participant">Add Participant</string>
+    <string name="devise">Devise</string>
 
     <string-array name="currencies_array">
         <item>EUR</item>

@@ -26,7 +26,7 @@
         android:layout_marginTop="32dp"
         android:text="@string/titre"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoImageViewPageAccueil" />
 
@@ -50,9 +50,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="24dp"
-        android:text="Devise"
+        android:text="@string/devise"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTitre" />
 
@@ -62,10 +62,11 @@
         android:layout_height="40dp"
         android:layout_marginTop="2dp"
         android:background="@drawable/rounded_button"
+        android:entries="@array/currencies_array"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDevise"
-        android:entries="@array/currencies_array" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewDevise" />
 
     <TextView
         android:id="@+id/textViewParticipants"
@@ -75,20 +76,20 @@
         android:layout_marginTop="24dp"
         android:text="@string/participants"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerDevise" />
 
     <EditText
         android:id="@+id/editTextParticipants"
-        android:layout_width="0dp"
+        android:layout_width="310dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_button"
         android:inputType="text"
-        android:textColor="@android:color/white"
         android:paddingStart="16dp"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toStartOf="@+id/buttonAddParticipant"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewParticipants" />
@@ -122,11 +123,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:background="@drawable/rounded_button"
-        android:textColor="#FFFFFF"
         android:text="@string/creer_tricount"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/participantsContainer" />
+        app:layout_constraintTop_toBottomOf="@+id/participantsContainer"
+        app:strokeColor="#D51515" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
