@@ -1,6 +1,14 @@
 package com.example.tricount;
 
 import java.util.Date;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.List;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+
 
 public class Depense {
     private String titre;

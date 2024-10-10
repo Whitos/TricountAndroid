@@ -7,4 +7,12 @@
     <string name="options">Options</string>
     <string name="participants">Participants</string>
     <string name="creer_tricount">Créer le tricount</string>
+    <string name="add_participant">Add Participant</string>
+
+    <string-array name="currencies_array">
+        <item>EUR</item>
+        <item>USD</item>
+        <item>CH</item>
+    </string-array>
+
 </resources>

@@ -3,32 +3,53 @@ package com.example.tricount;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tricount.databinding.ActivityAfficheRecyclerViewBinding;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AfficheRecyclerViewActivity extends AppCompatActivity {
 
-    private ActivityAfficheRecyclerViewBinding binding;
+    private RecyclerView recyclerView;
+    private TricountAdapter adapter;
+    private List<Tricount> tricountList;
+    private ImageButton buttonAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityAfficheRecyclerViewBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
-        setContentView(view);
+        setContentView(R.layout.activity_affiche_recycler_view);
 
-        binding.buttonAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AfficheRecyclerViewActivity.this, NewTricountActivity.class);
-                startActivity(intent);
-            }
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        tricountList = new ArrayList<>();
+        // Add any initialization or dummy data to tricountList if needed
+
+        adapter = new TricountAdapter(this, tricountList);
+        recyclerView.setAdapter(adapter);
+
+        buttonAdd = findViewById(R.id.buttonAdd);
+        buttonAdd.setOnClickListener(v -> {
+            Intent intent = new Intent(AfficheRecyclerViewActivity.this, NewTricountActivity.class);
+            startActivityForResult(intent, 1);
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            // Handle the new Tricount that was created in NewTricountActivity
+            String newTitle = data.getStringExtra("tricountTitle");
+            List<String> participants = data.getStringArrayListExtra("participants");
+            Tricount newTricount = new Tricount(newTitle, participants);
+            tricountList.add(0, newTricount);
+            adapter.notifyItemInserted(0);
+        }
     }
 }

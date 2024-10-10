@@ -1,5 +1,10 @@
 package com.example.tricount;
 
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.List;
+import android.view.LayoutInflater;
+import android.view.View;
+
 public enum CategorieDepense {
     LOGEMENT("Logement"),
     DIVERTISSEMENT("Divertissement"),

@@ -17,10 +17,7 @@ public class Participant {
         return email;
     }
 
-    public void addTricount(Tricount tricount) {
-        addTricount(tricount);
-    }
-
+    @Override
     public String toString() {
         return "Participant: " + name + ", " + "email: " + email;
     }
